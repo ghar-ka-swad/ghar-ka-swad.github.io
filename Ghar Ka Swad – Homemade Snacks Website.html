@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ghar Ka Swad – Homemade Snacks</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#fffaf2;--card:#fff;--ink:#2b1d14;--mute:#6f5f53;--brand:#b3341b;--brand2:#e8a317;--soft:#fbeed8;--line:#efe2cc;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c130e;--card:#2a1d15;--ink:#f6eadb;--mute:#c2b09c;--brand:#ef6a4c;--brand2:#f0b73a;--soft:#33241a;--line:#44311f}}
+:root[data-theme="dark"]{--bg:#1c130e;--card:#2a1d15;--ink:#f6eadb;--mute:#c2b09c;--brand:#ef6a4c;--brand2:#f0b73a;--soft:#33241a;--line:#44311f}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 Poppins,system-ui,sans-serif}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;margin:0 0 .5em}
+h1{font-size:clamp(2.1rem,6vw,3.6rem)}h2{font-size:clamp(1.6rem,4vw,2.3rem)}h3{font-size:1.15rem}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;max-width:1080px;margin:0 auto;flex-wrap:wrap}
+.logo{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:1.3rem;color:var(--brand)}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{padding:8px 14px;border-radius:99px;font-weight:500;font-size:.95rem;color:var(--mute)}
+nav a.on,nav a:hover{background:var(--soft);color:var(--brand)}
+.btn{display:inline-block;background:var(--brand);color:#fff;padding:12px 24px;border-radius:99px;font-weight:600;border:0;cursor:pointer;font:inherit;font-weight:600}
+.btn.alt{background:transparent;color:var(--brand);border:2px solid var(--brand)}
+.btn:hover{filter:brightness(1.1)}
+.page{display:none}.page.show{display:block}
+section{padding:56px 0}
+.hero{background:linear-gradient(135deg,var(--soft),var(--bg));padding:64px 0}
+.hero .wrap{display:grid;gap:32px;grid-template-columns:1.2fr 1fr;align-items:center}
+.hero p{color:var(--mute);font-size:1.1rem;max-width:520px}
+.tag{display:inline-block;background:var(--brand2);color:#2b1d14;font-size:.8rem;font-weight:600;padding:4px 12px;border-radius:99px;margin-bottom:14px}
+.art{font-size:7rem;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:32px;line-height:1.1;box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card .ic{font-size:2rem}
+.card p{color:var(--mute);margin:0;font-size:.95rem}
+.price{color:var(--brand);font-weight:600}
+.center{text-align:center}.sub{color:var(--mute);max-width:560px;margin:0 auto 32px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 18px;border-radius:99px;cursor:pointer;font:inherit;font-size:.9rem}
+.chip.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.item{display:flex;gap:14px;align-items:flex-start}
+.item .ic{font-size:2.2rem;background:var(--soft);border-radius:14px;padding:8px 12px}
+.band{background:var(--brand);color:#fff;border-radius:24px;padding:40px 24px;text-align:center}
+.band p{opacity:.9}.band .btn{background:#fff;color:var(--brand)}
+.two{display:grid;gap:32px;grid-template-columns:1fr 1fr}
+form{display:grid;gap:14px}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);font:inherit}
+label{font-size:.88rem;font-weight:500}
+ul.tick{list-style:none;padding:0}ul.tick li{padding:6px 0}ul.tick li:before{content:"✔ ";color:var(--brand)}
+footer{background:var(--soft);border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:760px){.hero .wrap,.two{grid-template-columns:1fr}.art{font-size:5rem}section{padding:40px 0}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<a class="logo" href="#home">🥨 Ghar Ka Swad</a>
+<nav><a href="#home" data-p="home">Home</a><a href="#menu" data-p="menu">Menu</a><a href="#about" data-p="about">Our Story</a><a href="#contact" data-p="contact">Order</a></nav>
+</div></header>
+
+<main>
+<!-- HOME -->
+<div class="page" id="home">
+<div class="hero"><div class="wrap">
+<div><span class="tag">100% Homemade · No Preservatives</span>
+<h1>Snacks made the way your <span style="color:var(--brand)">ghar</span> makes them.</h1>
+<p>Crisp namkeen, flaky mathri and melt-in-the-mouth laddoos, freshly prepared in small batches with pure ingredients and lots of love.</p>
+<p><a class="btn" href="#contact">Order Now</a> &nbsp; <a class="btn alt" href="#menu">View Menu</a></p></div>
+<div class="art">🥨🍘<br>🥜🍯</div>
+</div></div>
+
+<section><div class="wrap">
+<h2 class="center">Why families love us</h2>
+<p class="sub center">Small kitchen, big standards. Every batch is made fresh to order.</p>
+<div class="grid">
+<div class="card"><div class="ic">🌿</div><h3>Pure ingredients</h3><p>Cold-pressed oils, fresh spices, and zero artificial colours or preservatives.</p></div>
+<div class="card"><div class="ic">👩‍🍳</div><h3>Made in small batches</h3><p>Prepared fresh after you order, so every bite is crisp and flavourful.</p></div>
+<div class="card"><div class="ic">📦</div><h3>Hygienic packing</h3><p>Air-tight, food-grade pouches and jars that keep snacks fresh for weeks.</p></div>
+<div class="card"><div class="ic">🚚</div><h3>Delivered to you</h3><p>Local delivery and pan-India shipping available on bulk orders.</p></div>
+</div></div></section>
+
+<section style="background:var(--soft)"><div class="wrap">
+<h2 class="center">Our bestsellers</h2>
+<p class="sub center">The three snacks our customers reorder again and again.</p>
+<div class="grid">
+<div class="card"><div class="ic">🥨</div><h3>Methi Mathri</h3><p>Flaky, spiced and perfect with chai.</p><p class="price">₹120 / 250g</p></div>
+<div class="card"><div class="ic">🥜</div><h3>Moong Dal Namkeen</h3><p>Light, crunchy and lightly salted.</p><p class="price">₹130 / 250g</p></div>
+<div class="card"><div class="ic">🍯</div><h3>Besan Laddoo</h3><p>Desi ghee, slow-roasted besan, pure comfort.</p><p class="price">₹220 / 250g</p></div>
+</div></div></section>
+
+<section><div class="wrap">
+<h2 class="center">What customers say</h2><p class="sub center"></p>
+<div class="grid">
+<div class="card"><p>“Tastes exactly like my nani’s mathri. Fresh and not oily at all!”</p><p class="price">— Neha S.</p></div>
+<div class="card"><p>“Ordered a festive box for Diwali gifting. Everyone asked where it was from.”</p><p class="price">— Rohit M.</p></div>
+<div class="card"><p>“The besan laddoo is the best I’ve had outside my home. Will reorder!”</p><p class="price">— Anita K.</p></div>
+</div>
+<br><div class="band"><h2>Hungry already?</h2><p>Place your order today and get it fresh within 2–3 days.</p><a class="btn" href="#contact">Order Now</a></div>
+</div></section>
+</div>
+
+<!-- MENU -->
+<div class="page" id="menu">
+<section><div class="wrap">
+<h1>Our Menu</h1>
+<p class="sub" style="margin-left:0">All items are priced per 250g. Custom quantities and gift boxes available.</p>
+<div class="chips" id="chips"></div>
+<div class="grid" id="menuGrid"></div>
+</div></section>
+</div>
+
+<!-- ABOUT -->
+<div class="page" id="about">
+<section><div class="wrap two">
+<div><span class="tag">Our Story</span><h1>From our kitchen to yours.</h1>
+<p>Ghar Ka Swad began with a simple idea: the snacks we grew up eating were better than anything in a packet. What started as festive batches for family and friends is now a small home kitchen serving customers who miss the taste of real, homemade food.</p>
+<p>We cook in small batches, use traditional recipes, and never use preservatives, so what reaches you is as honest as what we would serve our own family.</p></div>
+<div class="art">👩‍🍳</div>
+</div></section>
+<section style="background:var(--soft)"><div class="wrap">
+<h2 class="center">What we stand for</h2><p class="sub center"></p>
+<div class="grid">
+<div class="card"><div class="ic">🤍</div><h3>Honest food</h3><p>Simple ingredients you can pronounce. Nothing artificial.</p></div>
+<div class="card"><div class="ic">🧼</div><h3>Clean kitchen</h3><p>Strict hygiene at every step, from cooking to packing.</p></div>
+<div class="card"><div class="ic">🏡</div><h3>Tradition</h3><p>Time-tested family recipes, never rushed.</p></div>
+</div></div></section>
+</div>
+
+<!-- CONTACT -->
+<div class="page" id="contact">
+<section><div class="wrap two">
+<div><h1>Place your order</h1>
+<p style="color:var(--mute)">Fill the form and we’ll confirm your order on WhatsApp.</p>
+<ul class="tick"><li>Fresh batches prepared after ordering</li><li>Delivery in 2–3 days (local)</li><li>Bulk &amp; festive gifting boxes available</li><li>Payment by UPI or cash on delivery</li></ul>
+<div class="card"><h3>Get in touch</h3><p>📍 Rajasthan, India<br>📞 +91 98765 43210<br>✉️ hello@gharkaswad.example<br>🕘 Mon–Sat, 9am – 7pm</p></div></div>
+<div class="card"><form id="oform">
+<div><label for="n">Your name</label><input id="n" required></div>
+<div><label for="s">Snack</label><select id="s"></select></div>
+<div><label for="q">Quantity (packs of 250g)</label><input id="q" type="number" min="1" value="1"></div>
+<div><label for="m">Address / notes</label><textarea id="m" rows="3"></textarea></div>
+<button class="btn" type="submit">Order on WhatsApp</button>
+</form></div>
+</div></section>
+</div>
+</main>
+
+<footer><div class="wrap"><div><b style="color:var(--brand)">🥨 Ghar Ka Swad</b><br>Homemade snacks, made with love.</div>
+<div>© 2026 Ghar Ka Swad · All rights reserved</div></div></footer>
+
+<script>
+var items=[
+["Methi Mathri","Namkeen",120,"🥨","Flaky and spiced with kasuri methi."],
+["Moong Dal Namkeen","Namkeen",130,"🥜","Light, crunchy fried moong dal."],
+["Aloo Bhujia","Namkeen",110,"🍟","Classic spicy potato sev."],
+["Namak Pare","Namkeen",100,"🔸","Crisp diamond-cut salty snack."],
+["Masala Khakhra","Baked & Dry",100,"🍘","Roasted, low-oil, great for tea time."],
+["Banana Chips","Baked & Dry",140,"🍌","Thin-sliced and fried in coconut oil."],
+["Papad Assorted","Baked & Dry",90,"🫓","Moong and urad papad, sun-dried."],
+["Besan Laddoo","Sweets",220,"🍯","Desi ghee and slow-roasted besan."],
+["Gur Papdi","Sweets",180,"🟫","Wheat and jaggery, ghee-rich."],
+["Dry Fruit Laddoo","Sweets",320,"🌰","Loaded with nuts and gond."]];
+var cats=["All","Namkeen","Baked & Dry","Sweets"],cur="All";
+function drawMenu(){
+ document.getElementById("chips").innerHTML=cats.map(function(c){return '<button class="chip'+(c==cur?' on':'')+'" data-c="'+c+'">'+c+'</button>'}).join("");
+ document.getElementById("menuGrid").innerHTML=items.filter(function(i){return cur=="All"||i[1]==cur}).map(function(i){
+  return '<div class="card item"><div class="ic">'+i[3]+'</div><div><h3>'+i[0]+'</h3><p>'+i[4]+'</p><p class="price">₹'+i[2]+' / 250g</p></div></div>'}).join("");
+}
+document.getElementById("chips").addEventListener("click",function(e){var c=e.target.getAttribute("data-c");if(c){cur=c;drawMenu()}});
+document.getElementById("s").innerHTML=items.map(function(i){return '<option>'+i[0]+' (₹'+i[2]+')</option>'}).join("");
+drawMenu();
+function route(){
+ var h=(location.hash||"#home").slice(1);if(!document.getElementById(h))h="home";
+ document.querySelectorAll(".page").forEach(function(p){p.classList.toggle("show",p.id==h)});
+ document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("data-p")==h)});
+ window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",route);route();
+document.getElementById("oform").addEventListener("submit",function(e){
+ e.preventDefault();
+ var t="Hello! I'd like to order from Ghar Ka Swad.\nName: "+n.value+"\nItem: "+s.value+"\nQuantity: "+q.value+" x 250g\nNotes: "+m.value;
+ window.open("https://wa.me/919876543210?text="+encodeURIComponent(t),"_blank");
+});
+</script>
+</body>
+</html>
